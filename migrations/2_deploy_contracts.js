@@ -1,5 +1,5 @@
-const Decentragram = artifacts.require("Decentragram");
+const Dgram = artifacts.require("Dgram");
 
 module.exports = function(deployer) {
-  // Code goes here...
+  deployer.deploy(Dgram);
 };
