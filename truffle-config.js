@@ -25,7 +25,8 @@ module.exports = {
           `wss://ropsten.infura.io/ws/v3/${secrets.projectId}`
         );
       },
-      network_id: 3,
+      host: "http://harsha711.github.io/",
+      network_id: "*",
     },
   },
   contracts_directory: "./src/contracts/",
