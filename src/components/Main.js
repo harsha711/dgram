@@ -53,6 +53,7 @@ class Main extends Component {
                   <div className="card mb-4" key={key}>
                     <div className="card-header">
                       <img
+                        alt="stfu"
                         className="mr-2"
                         width="30"
                         height="30"
@@ -67,6 +68,7 @@ class Main extends Component {
                       <li className="list-group-item">
                         <p className="text-center">
                           <img
+                            alt="stfu2"
                             src={`https://ipfs.infura.io/ipfs/${image.hash}`}
                             style={{ maxWidth: "420px" }}
                           />
