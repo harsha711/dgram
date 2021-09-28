@@ -1,14 +1,8 @@
 require("babel-register");
 require("babel-polyfill");
+require("dotenv").config();
 
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-const fs = require("fs");
-const secrets = JSON.parse(
-  fs
-    .readFileSync(".secrets.json")
-    .toString()
-    .trim()
-);
 
 module.exports = {
   networks: {
@@ -21,8 +15,8 @@ module.exports = {
       networkCheckTimeout: 10000,
       provider: () => {
         return new HDWalletProvider(
-          secrets.mnemonic,
-          `wss://ropsten.infura.io/ws/v3/${secrets.projectId}`
+          process.env.MNEMONIC,
+          `wss://ropsten.infura.io/ws/v3/${process.env.PROJECT_ID}`
         );
       },
       host: "http://harsha711.github.io/",
