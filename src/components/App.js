@@ -121,7 +121,9 @@ class App extends Component {
         <Navbar account={this.state.account} />
         {this.state.loading ? (
           <div id="loader" className="text-center mt-5">
-            <p>Loading...</p>
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
           </div>
         ) : (
           <Main
