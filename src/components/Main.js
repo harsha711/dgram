@@ -41,19 +41,22 @@ class Main extends Component {
                   required
                 />
                 <br />
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">Upload</span>
+                <div className="input-group mb-3">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text">Upload</span>
                   </div>
 
-                  <div class="custom-file">
+                  <div className="custom-file">
                     <input
                       type="file"
                       accept=".jpg, .jpeg, .png, .bmp, .gif"
                       onChange={this.props.captureFile}
-                      class="custom-file-input"
+                      className="custom-file-input"
                     />
-                    <label class="custom-file-label" for="inputGroupFile01">
+                    <label
+                      className="custom-file-label"
+                      htmlfor="inputGroupFile01"
+                    >
                       Select a File
                     </label>
                   </div>
@@ -71,7 +74,7 @@ class Main extends Component {
               {this.props.images.map((image, key) => {
                 return (
                   <>
-                    <div class="card" style={{ margin: "20px" }}>
+                    <div className="card" style={{ margin: "20px" }}>
                       <img
                         style={{ cursor: "pointer" }}
                         onClick={() =>
@@ -79,10 +82,10 @@ class Main extends Component {
                             `https://ipfs.infura.io/ipfs/${image.hash}`
                           )
                         }
-                        class="card-img-top"
+                        className="card-img-top"
                         src={`https://ipfs.infura.io/ipfs/${image.hash}`}
                       />
-                      <div class="card-body">
+                      <div className="card-body">
                         <img
                           alt="stfu"
                           className="mr-2"
@@ -96,11 +99,11 @@ class Main extends Component {
                         />
                         <small className="text-muted">{image.author}</small>
 
-                        <h5 class="card-title">{image.description}</h5>
+                        <h5 className="card-title">{image.description}</h5>
                         {/* <p class="card-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad alias, aliquid amet aspernatur atque culpa cum debitis dicta doloremque, dolorum ea eos et excepturi explicabo facilis harum illo impedit incidunt laborum laudantium...
           </p> */}
-                        <p class="card-text">
+                        <p className="card-text">
                           <small className="float-left mt-1 text-muted">
                             TIPS:{" "}
                             {window.web3.utils.fromWei(
