@@ -73,10 +73,12 @@ class Main extends Component {
                   <>
                     <div class="card" style={{ margin: "20px" }}>
                       <img
-                      style={{cursor:"pointer"}}
-                        onClick={() =>this.handleModal(
-                          `https://ipfs.infura.io/ipfs/${image.hash}`
-                        )}
+                        style={{ cursor: "pointer" }}
+                        onClick={() =>
+                          this.handleModal(
+                            `https://ipfs.infura.io/ipfs/${image.hash}`
+                          )
+                        }
                         class="card-img-top"
                         src={`https://ipfs.infura.io/ipfs/${image.hash}`}
                       />
@@ -111,6 +113,9 @@ class Main extends Component {
                         <button
                           className="btn btn-link btn-sm float-right pt-0"
                           name={image.id}
+                          disabled={
+                            image.author === this.props.account ? true : false
+                          }
                           onClick={(event) => {
                             let tipAmount = window.web3.utils.toWei(
                               "0.1",
@@ -191,8 +196,6 @@ class Main extends Component {
             </div>
           </main>
         </div>
-        
-        
       </div>
     );
   }

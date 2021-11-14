@@ -131,6 +131,7 @@ class App extends Component {
             captureFile={this.captureFile}
             uploadImage={this.uploadImage}
             tipImageOwner={this.tipImageOwner}
+            account={this.state.account}
           />
         )}
       </div>
