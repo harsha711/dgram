@@ -1,16 +1,16 @@
 {
   "main.css": "/dgram/static/css/main.4c7c187a.chunk.css",
-  "main.js": "/dgram/static/js/main.7107a030.chunk.js",
-  "main.js.map": "/dgram/static/js/main.7107a030.chunk.js.map",
+  "main.js": "/dgram/static/js/main.6dc2b02a.chunk.js",
+  "main.js.map": "/dgram/static/js/main.6dc2b02a.chunk.js.map",
   "static/css/1.bb02331f.chunk.css": "/dgram/static/css/1.bb02331f.chunk.css",
   "static/js/1.c42d2799.chunk.js": "/dgram/static/js/1.c42d2799.chunk.js",
   "static/js/1.c42d2799.chunk.js.map": "/dgram/static/js/1.c42d2799.chunk.js.map",
   "runtime~main.js": "/dgram/static/js/runtime~main.c3b3baea.js",
   "runtime~main.js.map": "/dgram/static/js/runtime~main.c3b3baea.js.map",
   "static/media/photo.png": "/dgram/static/media/photo.d6cbd8e6.png",
-  "static/css/main.4c7c187a.chunk.css.map": "/dgram/static/css/main.4c7c187a.chunk.css.map",
   "static/css/1.bb02331f.chunk.css.map": "/dgram/static/css/1.bb02331f.chunk.css.map",
+  "static/css/main.4c7c187a.chunk.css.map": "/dgram/static/css/main.4c7c187a.chunk.css.map",
   "index.html": "/dgram/index.html",
-  "precache-manifest.9f6e941d596cc673d2f776666cbb1ba5.js": "/dgram/precache-manifest.9f6e941d596cc673d2f776666cbb1ba5.js",
+  "precache-manifest.c0db63eef07dd75cb3d54115d5aff622.js": "/dgram/precache-manifest.c0db63eef07dd75cb3d54115d5aff622.js",
   "service-worker.js": "/dgram/service-worker.js"
 }

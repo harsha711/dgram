@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "7107a030114818825c83",
+    "revision": "6dc2b02a1014f93f0d63",
     "url": "/dgram/static/css/main.4c7c187a.chunk.css"
   },
   {
-    "revision": "7107a030114818825c83",
-    "url": "/dgram/static/js/main.7107a030.chunk.js"
+    "revision": "6dc2b02a1014f93f0d63",
+    "url": "/dgram/static/js/main.6dc2b02a.chunk.js"
   },
   {
     "revision": "c42d2799b56bba406d8b",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/dgram/static/media/photo.d6cbd8e6.png"
   },
   {
-    "revision": "60c9b9c05a0d6f2bbe5134a598c30bf9",
+    "revision": "97ba6a7880ab2ebc1f53ad93d89c543b",
     "url": "/dgram/index.html"
   }
 ];
