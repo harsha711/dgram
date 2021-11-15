@@ -16,7 +16,7 @@ class Navbar extends Component {
           </label>
           <a href="#" className="logo">
             <img
-              src={"/cat.png"}
+              src="https://i.imgur.com/2uIVYqX.png"
               width="50"
               height="50"
               style={{ marginLeft: "50px" }}
