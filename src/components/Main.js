@@ -1,17 +1,26 @@
 import React, { Component } from "react";
 import Identicon from "identicon.js";
+import "./Helper.css";
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { modalOpen: false };
-    this.state = { modalImage: "" };
-  }
-  handleModal = (img) => {
-    this.setState({ modalImage: img });
-    this.setState({ modalOpen: true });
+  state = { isOpen: false, imageUrl: "" };
+  handleShowDialog = (curr) => {
+    this.setState({ isOpen: !this.state.isOpen, imageUrl: curr });
+    console.log("cliked");
   };
   render() {
+    if (this.state.isOpen) {
+      return (
+        <div className="modal-content">
+          <img
+            className="modal-image"
+            src={`https://ipfs.infura.io/ipfs/${this.state.imageUrl}`}
+            alt="idk"
+            onClick={() => this.handleShowDialog(this.state.imageUrl)}
+          />
+        </div>
+      );
+    }
     return (
       <div className="container-fluid mt-5">
         <div className="row">
@@ -77,14 +86,11 @@ class Main extends Component {
                     <div className="card" style={{ margin: "20px" }}>
                       <img
                         style={{ cursor: "pointer" }}
-                        onClick={() =>
-                          this.handleModal(
-                            `https://ipfs.infura.io/ipfs/${image.hash}`
-                          )
-                        }
+                        onClick={() => this.handleShowDialog(image.hash)}
                         className="card-img-top"
                         src={`https://ipfs.infura.io/ipfs/${image.hash}`}
                       />
+
                       <div className="card-body">
                         <img
                           alt="stfu"
@@ -135,64 +141,6 @@ class Main extends Component {
                         </button>
                       </div>
                     </div>
-
-                    {/* <div className="card mb-4" key={key}>
-                      <div className="card-header">
-                        <img
-                          alt="stfu"
-                          className="mr-2"
-                          width="30"
-                          height="30"
-                          src={`data:image/png;base64,${new Identicon(
-                            image.author,
-                            30
-                          ).toString()}`}
-                        />
-                        <small className="text-muted">{image.author}</small>
-                      </div>
-                      <ul
-                        id="imageList"
-                        className="list-group list-group-flush"
-                      >
-                        <li className="list-group-item">
-                          <p className="text-center">
-                            <img
-                              alt="stfu2"
-                              src={`https://ipfs.infura.io/ipfs/${image.hash}`}
-                              style={{ maxWidth: "420px" }}
-                            />
-                          </p>
-                          <p>{image.description}</p>
-                        </li>
-                        <li key={key} className="list-group-item py-2">
-                          <small className="float-left mt-1 text-muted">
-                            TIPS:{" "}
-                            {window.web3.utils.fromWei(
-                              image.tipAmount.toString(),
-                              "Ether"
-                            )}{" "}
-                            ETH
-                          </small>
-                          <button
-                            className="btn btn-link btn-sm float-right pt-0"
-                            name={image.id}
-                            onClick={(event) => {
-                              let tipAmount = window.web3.utils.toWei(
-                                "0.1",
-                                "Ether"
-                              );
-                              console.log(event.target.name, tipAmount);
-                              this.props.tipImageOwner(
-                                event.target.name,
-                                tipAmount
-                              );
-                            }}
-                          >
-                            TIP 0.1 ETH
-                          </button>
-                        </li>
-                      </ul>
-                    </div> */}
                   </>
                 );
               })}

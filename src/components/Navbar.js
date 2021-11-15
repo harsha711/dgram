@@ -15,10 +15,16 @@ class Navbar extends Component {
             <i className="fa fa-bars"></i>
           </label>
           <a href="#" className="logo">
-            <img src={photo} width="40" height="40"></img>
+            <img
+              src={"/cat.png"}
+              width="50"
+              height="50"
+              style={{ marginLeft: "50px" }}
+            ></img>
+            <span style={{ color: "black", marginLeft: "10px" }}>Newko</span>
           </a>
           <input type="checkbox" id="chkToggle"></input>
-          <ul className="main-nav" id="js-menu">
+          <ul className="main-nav" id="js-menu" style={{ marginTop: "10px" }}>
             {this.props.account ? (
               <button
                 style={{ marginRight: "10px" }}
