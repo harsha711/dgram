@@ -6,4 +6,4 @@ https://harsha711.github.io/dgram/
 
 [Firefox Browser](https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/)
 
-### After creating an account then navigate to networks list and select ropsten test network
+### After creating an account, navigate to networks list and select ropsten test network
